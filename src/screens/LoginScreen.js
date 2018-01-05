@@ -4,15 +4,39 @@ import { StyleSheet, View, Text, TextInput, TouchableHighlight} from 'react-nati
 
 
 class LoginScreen extends React.Component {
+  state = {
+    email: '',
+    password: '',
+  }
+
+  handleSubmit() {
+    // Log in
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>
           ログイン
         </Text>
-        <TextInput style={styles.input} value="Email Address" />
-        <TextInput style={styles.input} value="password" />
-        <TouchableHighlight style={styles.button} title="送信" onPress={() => {}}>
+        <TextInput
+         style={styles.input}
+         value={this.state.email}
+         onChangeText={(text) => { this.setState({ email: text }) }}
+         autoCapitalize='none'
+         autoCorrect={false}
+         placeholder="Email address"
+         />
+        <TextInput
+        style={styles.input}
+        value={this.state.password}
+        onChangeText={(text) => { this.setState({ password: text }) }}
+        autoCapitalize='none'
+        autoCorrect={false}
+        placeholder="password"
+        secureTextEntry
+        />
+        <TouchableHighlight style={styles.button} title="送信" onPress={this.handleSubmit.bind(this)}>
           <Text style={styles.buttonItem}>
           ログインする
           </Text>
