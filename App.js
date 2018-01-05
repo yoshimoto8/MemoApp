@@ -6,9 +6,9 @@ import LoginScreen from './src/screens/LoginScreen'
 import SignupScreen from './src/screens/SignupScreen'
 
 const App = StackNavigator({
-  MemoDetailScreen: {screen: MemoDetailScreen},
   Home:             {screen: MemoListScreen},
-  MemoEditScreen:   {screen: MemoEditScreen},
+  MemoDetail:       {screen: MemoDetailScreen},
+  MemoEdit:   {screen: MemoEditScreen},
   LoginScreen:      {screen: LoginScreen},
   SignupScreen:     {screen: SignupScreen},
   },{
