@@ -16,7 +16,7 @@ class CircleButton extends React.Component {
     return (
       <View style={[styles.circleButton, style, { backgroundColor: bgColor}]}>
        <Text style={[styles.memoAddBottonTitle, {color: textColor }]}>
-         {this.props.children}
+         +
        </Text>
      </View>
     )
